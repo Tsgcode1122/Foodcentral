@@ -18,15 +18,27 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `;
-
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
   min-height: 100vh;
+  position: relative;
   background: url(${foodcentral3}) no-repeat center center;
   background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark overlay */
+    /* z-index: -1; */
+  }
+
   @media screen and (max-width: 320px) {
     padding: 0 20px;
   }
@@ -35,7 +47,7 @@ const Container = styled.div`
 const Center = styled.div`
   background: rgba(255, 255, 255, 0.2);
   padding: 50px 20px;
-  backdrop-filter: blur(5px); /* Apply backdrop-filter for blur effect */
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   img {
     max-width: 100%;
@@ -102,7 +114,7 @@ const CustomModalBackground = styled.div`
   justify-content: center;
   align-items: center;
   animation: ${fadeIn} 0.3s ease-out;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(15px);
 `;
 
 const CustomModalContent = styled.div`

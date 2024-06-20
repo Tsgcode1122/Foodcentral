@@ -2,6 +2,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import ImageSlider from "./Component/ImageSlider";
+import NewHero from "./Component/NewHero";
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <ImageSlider />
+      {/* <NewHero /> */}
     </div>
   );
 }

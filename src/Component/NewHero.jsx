@@ -24,7 +24,6 @@ const SliderWrapper = styled.div`
     height: 50vh;
   }
   @media (min-width: 321px) and (max-width: 499px) {
-    height: 50vh;
   }
 `;
 const Container = styled.div`
@@ -66,7 +65,6 @@ const Slide = styled.img`
     height: 50vh;
   }
   @media (min-width: 321px) and (max-width: 499px) {
-    height: 50vh;
   }
 `;
 
@@ -95,24 +93,13 @@ const Title = styled.h1`
   display: flex;
   flex-direction: column;
   span {
-    color: #ac0000;
+    color: #ff6f13;
     font-style: italic;
     margin-top: -40px;
     font-size: 3rem;
-    background: linear-gradient(
-      90deg,
-      #240600 0%,
-      #ac0000 33%,
-      #bc4b4b 53%,
-      #ff1313 75%,
-      #ff0000 100%
-    );
     font-weight: 500;
-    padding: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
     @media screen and (max-width: 320px) {
-      font-size: 2.1rem;
+      font-size: 2rem;
       margin-top: -25px;
     }
     @media (min-width: 321px) and (max-width: 399px) {
@@ -131,39 +118,37 @@ const Title = styled.h1`
     font-size: 3.5rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: -10px;
   margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-font-weight:400;
   span {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 0.8;
-
+    font-weight: bold;
     color: #ff6f13;
     @media screen and (max-width: 320px) {
       font-size: 2.5rem;
     }
     @media (min-width: 321px) and (max-width: 499px) {
       font-size: 3rem;
-      f
     }
   }
   @media screen and (max-width: 320px) {
-    font-size: 1.2rem;
-    margin-top: -10px;
+    font-size: 1rem;
+    margin-top: -1px;
   }
   @media (min-width: 321px) and (max-width: 499px) {
-    font-size: 1.5rem;
-    margin-top: -10px;
+    font-size: 1.2rem;
+    margin-top: -1px;
   }
 `;
 
@@ -253,7 +238,7 @@ const ListItem = styled.p`
   }
 `;
 
-const ImageSlider = () => {
+const NewHero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   useBottomToTopSwipe(".bottom-top");
   useEffect(() => {
@@ -290,7 +275,8 @@ const ImageSlider = () => {
               <span>Present</span>
             </Title>
             <Subtitle>
-              5 Must-Have Nigerian Meals & Delicacies You Must Try Out!
+              <span>5</span> Must-Have Nigerian Meals & Delicacies
+              <Break> You Must Try Out!</Break>
             </Subtitle>
           </OverlayText>
         </SliderWrapper>
@@ -321,4 +307,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default NewHero;
