@@ -23,11 +23,12 @@ const images = [
 const SliderWrapper = styled.div`
   position: relative;
   height: 100vh;
+  margin-bottom: 0 !important;
   overflow: hidden;
   box-shadow:
     rgba(133, 133, 192, 0.25) 0px 13px 27px -5px,
     rgba(159, 157, 157, 0.3) 0px 8px 16px -8px;
-  margin: auto;
+
   /* border-radius: 0 0 45px 45px; */
   @media screen and (max-width: 320px) {
     height: 120vh;
