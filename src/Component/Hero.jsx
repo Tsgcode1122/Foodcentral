@@ -225,8 +225,8 @@ const Button = styled.button`
     transform 0.3s ease;
 
   &:hover {
-    background-color: #ff4e13;
-    transform: scale(1.05);
+    background-color: red;
+    transform: scale(1.08);
   }
 
   &:focus {
@@ -331,7 +331,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 3000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
