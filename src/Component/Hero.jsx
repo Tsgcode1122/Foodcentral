@@ -35,6 +35,7 @@ const SliderWrapper = styled.div`
     overflow: none;
   }
   @media (min-width: 321px) and (max-width: 499px) {
+    margin-bottom: 29rem !important;
   }
 `;
 const Container = styled.div`
