@@ -143,7 +143,7 @@ const Subtitle = styled.p`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-font-weight:400;
+  font-weight: 400;
   span {
     font-size: 2rem;
     line-height: 0.8;
@@ -154,7 +154,6 @@ font-weight:400;
     }
     @media (min-width: 321px) and (max-width: 499px) {
       font-size: 3rem;
-      f
     }
   }
   @media screen and (max-width: 320px) {
