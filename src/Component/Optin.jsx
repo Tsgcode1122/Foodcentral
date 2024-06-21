@@ -36,13 +36,13 @@ const Container = styled.div`
   } */
 
   @media screen and (max-width: 320px) {
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    padding: 0 40px;
+    /* padding: 0 40px; */
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    padding: 0 50px;
+    /* padding: 0 50px; */
   }
 `;
 
@@ -57,6 +57,12 @@ const Center = styled.div`
   }
   @media screen and (max-width: 320px) {
     padding: 50px 20px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    margin: 2rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    margin: 2rem;
   }
 `;
 
