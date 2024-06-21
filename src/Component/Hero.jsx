@@ -33,9 +33,10 @@ const SliderWrapper = styled.div`
   @media screen and (max-width: 320px) {
     height: 120vh;
     overflow: none;
+    margin-bottom: 0 !important;
   }
   @media (min-width: 321px) and (max-width: 499px) {
-    margin-bottom: 29rem !important;
+    margin-bottom: 0 !important;
   }
 `;
 const Container = styled.div`
