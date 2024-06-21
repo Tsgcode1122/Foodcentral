@@ -176,7 +176,7 @@ const Subtitle = styled.p`
   }
   @media screen and (max-width: 320px) {
     font-size: 1rem !important;
-    margin-top: -10px;
+    margin-top: 10px;
     padding: 0 10px;
   }
   @media (min-width: 321px) and (max-width: 499px) {
@@ -201,10 +201,10 @@ const ButtonContainer = styled.div`
   position: relative;
   z-index: 2;
   @media screen and (max-width: 320px) {
-    margin-top: 0.6rem;
+    margin-top: 1rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
     margin-top: 2rem;
