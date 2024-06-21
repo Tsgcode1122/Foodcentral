@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     // element: <Navbar />,
     children: [
       { index: true, element: <NewHero /> },
-      { path: "version2", element: <ImageSlider /> },
+      { path: "version", element: <ImageSlider /> },
     ],
   },
 ]);

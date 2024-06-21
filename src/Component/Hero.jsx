@@ -172,12 +172,12 @@ const Subtitle = styled.p`
     }
   }
   @media screen and (max-width: 320px) {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     margin-top: -10px;
     padding: 0 10px;
   }
   @media (min-width: 321px) and (max-width: 499px) {
-    font-size: 1.5rem;
+    font-size: 1.4rem !important;
     margin-top: -0px;
     padding: 0 1px;
   }

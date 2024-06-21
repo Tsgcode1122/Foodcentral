@@ -4,7 +4,7 @@ import { Spin, Input as AntdInput } from "antd";
 import { UserOutlined, MailOutlined } from "@ant-design/icons";
 import axios from "axios";
 import "antd/dist/reset.css";
-import foodcentral3 from "../images/bsd.jpg";
+import foodcentral3 from "../images/abn.jpg";
 import cong from "../images/cong.png";
 import click from "../images/click.png";
 import useBounceIn from "../animation/ useBounceIn";
@@ -19,25 +19,21 @@ const fadeIn = keyframes`
   }
 `;
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 70px;
   min-height: 100vh;
   position: relative;
   background: url(${foodcentral3}) no-repeat center center;
   background-size: cover;
 
-  &::before {
+  /* &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(0, 0, 0, 0.9);  */
-    /* z-index: -1; */
-  }
+    background: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+  } */
 
   @media screen and (max-width: 320px) {
     padding: 0 20px;
@@ -53,7 +49,8 @@ const Container = styled.div`
 const Center = styled.div`
   background: rgba(255, 255, 255, 0.2);
   padding: 50px 20px;
-  backdrop-filter: blur(10px);
+  margin: 4rem;
+  backdrop-filter: blur(1px);
   border-radius: 20px;
   img {
     max-width: 100%;
@@ -65,7 +62,14 @@ const Center = styled.div`
 
 const FormWrapper = styled.div`
   text-align: center;
+  height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  /* border-radius: 20px; */
+  background: rgba(0, 0, 0, 0.9);
 `;
 
 const Title = styled.h2`
