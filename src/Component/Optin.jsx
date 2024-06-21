@@ -57,6 +57,7 @@ const Center = styled.div`
   }
   @media screen and (max-width: 320px) {
     padding: 50px 20px;
+    margin: 1rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
     margin: 2rem;
