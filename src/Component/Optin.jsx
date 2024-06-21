@@ -22,7 +22,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 70px;
   min-height: 100vh;
   position: relative;
   background: url(${foodcentral3}) no-repeat center center;
@@ -41,6 +41,12 @@ const Container = styled.div`
 
   @media screen and (max-width: 320px) {
     padding: 0 20px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    padding: 0 40px;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    padding: 0 50px;
   }
 `;
 

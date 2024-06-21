@@ -3,25 +3,40 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import ImageSlider from "./Component/ImageSlider";
 import NewHero from "./Component/NewHero";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    background-color: black;
    font-family: "Source Serif 4", serif;
   }
   body.modal-open {
   overflow: hidden;
     /* position: relative; */
-}
+  }
 `;
-function App() {
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    // element: <Navbar />,
+    children: [
+      { index: true, element: <NewHero /> },
+      { path: "version2", element: <ImageSlider /> },
+    ],
+  },
+]);
+
+const App = () => {
   return (
-    <div className="App">
+    <>
       <GlobalStyle />
-      <ImageSlider />
-      {/* <NewHero /> */}
-    </div>
+
+      <RouterProvider router={router} />
+    </>
   );
-}
+};
 
 export default App;
