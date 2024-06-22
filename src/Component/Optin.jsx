@@ -50,6 +50,7 @@ const Center = styled.div`
   background: rgba(255, 255, 255, 0.2);
   padding: 50px 20px;
   margin: 4rem;
+  max-width: 400px;
   backdrop-filter: blur(1px);
   border-radius: 20px;
   img {
