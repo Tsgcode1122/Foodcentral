@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background-color: black;
-   font-family: "Source Serif 4", serif;
+    font-family: "Montserrat", sans-serif;
   }
   body.modal-open {
   overflow: hidden;

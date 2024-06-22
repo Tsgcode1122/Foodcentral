@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import foodcentral from "../images/Y1.png";
-import foodcentral1 from "../images/Y2.png";
-import foodcentral2 from "../images/Y3.png";
-import foodcentral4 from "../images/Y4.png";
-import foodcentral5 from "../images/y5.png";
+import foodcentral from "../images/c1.png";
+import foodcentral1 from "../images/c2.png";
+import foodcentral2 from "../images/c3.png";
+import foodcentral4 from "../images/c4.png";
+import foodcentral5 from "../images/c5.png";
 import foodcentral6 from "../images/res3.png";
 import foodcentral3 from "../images/new232.jpg";
 import check from "../images/check.png";
@@ -24,7 +24,7 @@ const SliderWrapper = styled.div`
   position: relative;
   height: 100vh;
   margin-bottom: 0 !important;
-  /* overflow: hidden; */
+  overflow: hidden;
   box-shadow:
     rgba(133, 133, 192, 0.25) 0px 13px 27px -5px,
     rgba(159, 157, 157, 0.3) 0px 8px 16px -8px;
@@ -308,7 +308,7 @@ const ListItem = styled.p`
   gap: 20px;
   text-align: left;
   font-weight: 200;
-  font-family: "Source Serif 4", serif;
+  font-family: "Montserrat", sans-serif;
   @media screen and (max-width: 320px) {
     font-size: 1rem;
     margin: 0.5rem 0;

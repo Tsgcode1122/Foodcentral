@@ -154,7 +154,7 @@ const CustomModalContent = styled.div`
   }
   p {
     font-weight: 400;
-    font-family: "Source Serif 4", serif;
+    font-family: "Montserrat", sans-serif;
   }
 `;
 
@@ -186,7 +186,7 @@ const ModalStep = styled.p`
     border-radius: 10px;
     text-align: center;
     font-weight: 400;
-    font-family: "Source Serif 4", serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 5px;
   }
   a {
@@ -200,7 +200,7 @@ const ModalStep = styled.p`
     text-align: center;
     color: black;
     font-weight: 200;
-    font-family: "Source Serif 4", serif;
+    font-family: "Montserrat", sans-serif;
     @media screen and (max-width: 320px) {
       padding: 8px;
     }
