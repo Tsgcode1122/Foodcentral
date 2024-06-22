@@ -13,6 +13,9 @@ const LogoNav = styled.div`
     width: 120px;
     height: auto;
   }
+  @media screen and (min-width: 800px) {
+    padding-left: 2rem;
+  }
 `;
 
 const Navbar = () => {

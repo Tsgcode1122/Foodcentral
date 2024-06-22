@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import foodcentral from "../images/c1.png";
-import foodcentral1 from "../images/c2.png";
-import foodcentral2 from "../images/c3.png";
-import foodcentral4 from "../images/c4.png";
-import foodcentral5 from "../images/c5.png";
+import foodcentral from "../images/h1.png";
+import foodcentral1 from "../images/h2.png";
+import foodcentral2 from "../images/h3.png";
+import foodcentral4 from "../images/h4.png";
+import foodcentral5 from "../images/h5.png";
 import foodcentral6 from "../images/res3.png";
 import foodcentral3 from "../images/new232.jpg";
 import check from "../images/check.png";
@@ -23,6 +23,9 @@ const images = [
 const SliderWrapper = styled.div`
   position: relative;
   height: 100vh;
+  display: flex;
+  align-items: center;
+
   margin-bottom: 0 !important;
   overflow: hidden;
   box-shadow:
@@ -42,22 +45,22 @@ const SliderWrapper = styled.div`
 const Container = styled.div`
   /* height: 10vh; */
   width: 100%;
-  /* overflow: hidden; */
-  /* position: relative; */
+  display: none !important;
+
   &::before {
     /* content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: url(${foodcentral3}) no-repeat center center;
+    height: 100%; */
+    /* background: url(${foodcentral3}) no-repeat center center; */
     background-size: cover;
     opacity: 0.1;
-    z-index: -1; */
+    z-index: -1;
   }
   @media screen and (min-width: 800px) {
-    display: none !important;
+    display: block !important;
   }
   @media (min-width: 321px) and (max-width: 499px) {
   }
@@ -87,7 +90,8 @@ const OverlayText = styled.div`
   color: white;
   text-align: center;
   z-index: 9;
-  padding-top: 280px;
+  align-items: center;
+  /* padding-top: 80px; */
 
   @media screen and (max-width: 320px) {
     /* padding: 80px 20px 100vh 20px; */
@@ -102,21 +106,25 @@ const OverlayText = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
   display: flex;
+  margin-bottom: -4px !important;
   align-items: center;
   text-align: center;
   flex-direction: column;
+  @media (min-width: 800px) and (max-width: 1200px) {
+    font-size: 3.5rem;
+  }
+
   span {
     color: #ac0000;
     font-style: italic;
-    margin-top: -10px;
+    margin-top: 290px !important;
     /* background-color: red; */
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     z-index: 999;
-    /* padding: 5px 7px; */
-    border-radius: 20px;
+
     /* background: linear-gradient(
       90deg,
       #240600 0%,
@@ -126,21 +134,6 @@ const Title = styled.h1`
       #ff0000 100%
     ); */
     font-weight: 500;
-
-    /* background-clip: text; */
-    /* -webkit-background-clip: text; */
-    @media screen and (max-width: 320px) {
-      font-size: 1.1rem !important;
-      /* margin-top: -25px; */
-    }
-    @media (min-width: 321px) and (max-width: 399px) {
-      /* font-size: 2rem; */
-      margin-top: -25px;
-    }
-    @media (min-width: 400px) and (max-width: 499px) {
-      font-size: 2.5rem;
-      /* margin-top: -30px; */
-    }
   }
   @media screen and (max-width: 320px) {
     font-size: 2.6rem;
@@ -154,14 +147,21 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.6rem !important;
+  font-size: 2rem !important;
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 50px;
   display: flex;
   /* flex-wrap: wrap; */
   justify-content: center;
   text-align: center;
+
   font-weight: 400;
+  @media (min-width: 800px) and (max-width: 1000px) {
+    font-size: 1.3rem !important;
+  }
+  @media (min-width: 1001px) and (max-width: 1300px) {
+    font-size: 1.3rem !important;
+  }
   span {
     /* font-size: 2rem; */
     line-height: 0.8;
@@ -183,16 +183,6 @@ const Subtitle = styled.p`
     font-size: 1.4rem !important;
     margin-top: -0px;
     padding: 0 1px;
-  }
-`;
-
-const Break = styled.span`
-  width: 100%;
-  font-weight: 600 !important;
-  font-size: 1.5rem !important;
-  @media screen and (max-width: 320px) {
-    font-size: 1.2rem !important;
-    margin-top: -1px;
   }
 `;
 
@@ -241,10 +231,8 @@ const ListContainer = styled.div`
   position: relative;
   text-align: center;
   z-index: 99;
-  margin-top: -2rem;
-  /* color: black; */
-  border-radius: 45px 45px 0 0;
-  padding: 0px 0px 0 0px;
+
+  border-radius: 0 70px 70px 0;
 
   background: url(${foodcentral3}) no-repeat center center;
   background-size: cover;
@@ -264,31 +252,32 @@ const AniLay = styled.div`
   h4 {
     font-size: 1.4rem;
     margin-top: -1rem;
-    @media screen and (max-width: 320px) {
-      display: none !important;
+    @media (min-width: 800px) and (max-width: 1000px) {
+      font-size: 1.2rem !important;
     }
-    @media (min-width: 321px) and (max-width: 399px) {
-      margin-top: -1rem !important;
+    @media (min-width: 1001px) and (max-width: 1300px) {
+      font-size: 1.2rem !important;
     }
   }
 `;
 const Newlay = styled.div`
-  border-radius: 45px 45px 0 0;
-  padding: 10px 20px 80px 20px;
+  border-radius: 0 70px 70px 0;
+  padding: 50px 100px 50px 40px;
   background: rgba(0, 0, 0, 0.8);
-
+  max-width: 720px;
+  @media (min-width: 800px) and (max-width: 1000px) {
+    max-width: 530px !important;
+    padding: 30px 30px 30px 20px;
+  }
+  @media (min-width: 1000px) and (max-width: 1300px) {
+    max-width: 650px !important;
+    padding: 40px 80px 40px 30px;
+  }
   span {
     font-size: 2rem;
     color: #ac0000;
     z-index: 999;
     font-style: italic;
-    @media screen and (max-width: 320px) {
-      font-size: 1.5rem;
-      margin: 0.5rem 0;
-    }
-    @media (min-width: 321px) and (max-width: 399px) {
-      font-size: 1.8rem;
-    }
   }
 `;
 const ListTitle = styled.span`
@@ -302,7 +291,7 @@ const ListTitle = styled.span`
 `;
 
 const ListItem = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 0.8rem 0;
   display: flex;
   gap: 20px;
@@ -313,19 +302,19 @@ const ListItem = styled.p`
     font-size: 1rem;
     margin: 0.5rem 0;
   }
-  /* @media (min-width: 321px) and (max-width: 399px) {
-    margin-top: -1.5rem !important;
+  @media (min-width: 800px) and (max-width: 1000px) {
+    font-size: 1.1rem !important;
   }
-  @media (min-width: 400px) and (max-width: 499px) {
-    margin-top: -1.5rem !important;
-  } */
+  @media (min-width: 1001px) and (max-width: 1300px) {
+    font-size: 1.2rem !important;
+  }
   img {
     max-width: 100%;
     height: 20px;
   }
 `;
 
-const Hero = () => {
+const HeroBig = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   useBottomToTopSwipe(".bottom-top");
   useEffect(() => {
@@ -357,9 +346,9 @@ const Hero = () => {
             />
           ))}
           <OverlayText>
-            <Title>Food Central</Title>
             <ListContainer>
               <Newlay>
+                <Title>Food Central</Title>
                 <span>Present</span>
                 <AniLay className="bottom-top">
                   <Subtitle>
@@ -393,4 +382,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroBig;

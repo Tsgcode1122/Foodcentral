@@ -13,6 +13,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import useBottomToTopSwipe from "../animation/useBottomToTopSwipe";
 import Hero from "./Hero";
+import HeroBig from "./HeroBig";
 const images = [
   foodcentral,
   foodcentral1,
@@ -317,6 +318,7 @@ const NewHero = () => {
   return (
     <>
       <Hero />
+      <HeroBig />
       <div id="Opt-in">
         <Optin />
       </div>
