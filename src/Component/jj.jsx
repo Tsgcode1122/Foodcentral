@@ -6,10 +6,9 @@ import axios from "axios";
 import "antd/dist/reset.css";
 import foodcentral3 from "../images/abn.jpg";
 import cong from "../images/cong.png";
-import newfood from "../images/tbg.png";
+import newfood from "../images/newfood4.png";
 import click from "../images/click.png";
 import rush from "../images/rush.png";
-import biker from "../images/biker.png";
 import useBounceIn from "../animation/ useBounceIn";
 import useZoomInAnimation from "../animation/useZoomInAnimation";
 
@@ -91,26 +90,6 @@ const Title = styled.h2`
     font-size: 1.4rem;
   }
 `;
-const NewBackground = styled.div`
-  background: white;
-  border-right: 5px solid #ac0000;
-  border-left: 5px solid #ac0000;
-
-  border-radius: 60px 10px 60px 10px;
-  padding: 0.3rem;
-  span {
-    background-color: #ac0000;
-    padding: 1rem;
-    border-radius: 60px 10px 60px 10px;
-    color: white;
-    display: flex;
-  }
-
-  img {
-    max-width: 100%;
-    height: 60px;
-  }
-`;
 
 const StyledInput = styled(AntdInput)`
   width: 100%;
@@ -185,6 +164,11 @@ const CustomModalContent = styled.div`
 const CongImage = styled.img`
   max-width: 100%;
   padding: 30px;
+
+  /* position: absolute; */
+  /* top: -100px; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   z-index: 1;
 `;
 
@@ -196,26 +180,26 @@ const ClickImage = styled.img`
 
 const ModalStep = styled.p`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   span {
     background-color: #ac0000;
     color: white;
-    padding: 10px;
-    border-radius: 15px 0 0 15px;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
     text-align: center;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
-    /* margin-bottom: 5px; */
+    margin-bottom: 5px;
   }
   a {
     background-color: white;
-    border-radius: 0 15px 15px 0;
+    border-radius: 10px;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-decoration: none;
     width: 100%;
-    /* margin-top: -18px; */
+    margin-top: -18px;
     text-align: center;
     color: black;
     font-weight: 200;
@@ -250,10 +234,6 @@ const StyledParagraph = styled.p`
   @media screen and (max-width: 320px) {
     font-size: 1rem;
   }
-`;
-const Biker = styled.img`
-  max-width: 100%;
-  height: 150px;
 `;
 const Newbg = styled.div`
   background-color: white;
@@ -290,7 +270,7 @@ const Part = styled.div`
 const Optin = () => {
   useBounceIn(".bounce-In");
   useZoomInAnimation(".zoom-in");
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -375,16 +355,12 @@ const Optin = () => {
             <h2>Don't Close this page or you will lose your FREE Copy!</h2>
             <Part>
               <p>Trying to find the best dishes around you?</p>
-              <NewBackground>
-                <span>
-                  Get Fast Food Delivery in 30 minutes or receive a free
-                  voucher!
-                  <img src={rush} />
-                </span>
-              </NewBackground>
-              <Biker src={biker}></Biker>
+              <p>
+                Get Fast Food delivery in 30 minutes or receive a free voucher!
+              </p>
               <ModalStep>
                 <span>STEP 1</span>
+
                 <a href="https://foodxliquorcentral.africa.restaurant/?fbclid=PAZXh0bgNhZW0CMTEAAaZOcZTSG1nOUFoFvQE8LDJMpLNjzbG6XRnkR3Qc2zs9aWrpSqZyLcqv9LQ_aem_ZmFrZWR1bW15MTZieXRlcw">
                   Click Here To Order From Our Finger Licking Variety Menu!{" "}
                   <ClickImage src={click} className="zoom-in" />
