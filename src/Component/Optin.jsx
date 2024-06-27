@@ -185,6 +185,7 @@ const CustomModalContent = styled.div`
 const CongImage = styled.img`
   max-width: 100%;
   padding: 30px;
+  height: 150px;
   z-index: 1;
 `;
 
@@ -198,6 +199,7 @@ const ModalStep = styled.p`
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* font-size: 15px; */
   span {
     background-color: #ac0000;
     color: white;
@@ -205,6 +207,7 @@ const ModalStep = styled.p`
     border-radius: 15px 0 0 15px;
     text-align: center;
     font-weight: 400;
+
     font-family: "Montserrat", sans-serif;
     /* margin-bottom: 5px; */
   }
@@ -290,7 +293,7 @@ const Part = styled.div`
 const Optin = () => {
   useBounceIn(".bounce-In");
   useZoomInAnimation(".zoom-in");
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",

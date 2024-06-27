@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import foodcentral from "../images/h1.png";
-import foodcentral1 from "../images/h2.png";
-import foodcentral2 from "../images/h3.png";
-import foodcentral4 from "../images/h4.png";
-import foodcentral5 from "../images/h5.png";
+import foodcentral from "../images/ch1.png";
+import foodcentral1 from "../images/ch2.png";
+import foodcentral2 from "../images/ch3.png";
+import foodcentral4 from "../images/ch4.png";
+import foodcentral5 from "../images/ch5.png";
 import foodcentral6 from "../images/res3.png";
 import foodcentral3 from "../images/new232.jpg";
 import check from "../images/check.png";
