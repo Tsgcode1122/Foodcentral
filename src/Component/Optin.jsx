@@ -293,7 +293,7 @@ const Part = styled.div`
 const Optin = () => {
   useBounceIn(".bounce-In");
   useZoomInAnimation(".zoom-in");
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
