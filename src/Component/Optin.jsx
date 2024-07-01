@@ -12,6 +12,7 @@ import rush from "../images/rush.png";
 import biker from "../images/biker.png";
 import useBounceIn from "../animation/ useBounceIn";
 import useZoomInAnimation from "../animation/useZoomInAnimation";
+import HeroMoving from "./HeroMoving";
 
 const fadeIn = keyframes`
   from {
@@ -23,20 +24,10 @@ const fadeIn = keyframes`
 `;
 const Container = styled.div`
   min-height: 100vh;
+  overflow: hidden;
   position: relative;
-  background: url(${foodcentral3}) no-repeat center center;
-  background-size: cover;
-
-  /* &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: -1;
-  } */
+  background-color: #ffffff;
+  /* background-size: cover; */
 
   @media screen and (max-width: 320px) {
     /* padding: 0 20px; */
@@ -50,24 +41,27 @@ const Container = styled.div`
 `;
 
 const Center = styled.div`
-  background: rgba(255, 255, 255, 0.2);
-  padding: 50px 20px;
+  background: white;
+  min-height: 500px;
+  overflow: hidden;
   margin: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   max-width: 400px;
-  backdrop-filter: blur(1px);
+  z-index: 999;
   border-radius: 20px;
   img {
     max-width: 100%;
   }
   @media screen and (max-width: 320px) {
-    padding: 50px 20px;
-    margin: 1rem;
+    min-height: 100px !important;
+    max-width: 300px;
+    margin: 1.5rem !important;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    margin: 2rem;
+    margin: 1.5rem !important;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    margin: 2rem;
+    margin: 2rem !important;
   }
 `;
 
@@ -77,22 +71,92 @@ const FormWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-
   justify-content: center;
-  /* border-radius: 20px; */
-  background: rgba(0, 0, 0, 0.9);
+  @media screen and (max-width: 320px) {
+    height: 100vh;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+  }
+`;
+const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 `;
 
 const Title = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: white;
+  padding: 20px;
+  background-color: #ac0000;
+  border-radius: 20px 20px 20px 20px;
   @media screen and (max-width: 320px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+    font-size: 1.5rem;
   }
 `;
+const Circle = styled.div`
+  width: 300px;
+  background-color: #ffc4a0;
+  height: 300px;
+  position: absolute;
+  margin-top: -7rem;
+  margin-left: -7rem;
+  border-radius: 50%;
+  @media screen and (max-width: 320px) {
+    width: 200px;
+
+    height: 200px;
+
+    margin-top: -4rem;
+    margin-left: -7rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+  }
+`;
+const Circle2 = styled.div`
+  width: 300px;
+  background-color: #ac0000;
+  height: 300px;
+
+  position: absolute;
+
+  margin-top: -10rem;
+  margin-right: -7rem;
+  border-radius: 50%;
+  @media screen and (max-width: 320px) {
+    width: 200px;
+
+    height: 200px;
+
+    margin-top: -8rem;
+    margin-right: -5rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
+  }
+`;
+const MainCircle = styled.div`
+  display: flex;
+
+  justify-content: end;
+`;
 const NewBackground = styled.div`
-  background: white;
   border-right: 5px solid #ac0000;
   border-left: 5px solid #ac0000;
 
@@ -139,7 +203,11 @@ const SubmitButton = styled.button`
     background-color: #8e2c2c;
   }
   @media screen and (max-width: 320px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  @media (min-width: 321px) and (max-width: 399px) {
+  }
+  @media (min-width: 400px) and (max-width: 499px) {
   }
 `;
 
@@ -159,12 +227,11 @@ const CustomModalBackground = styled.div`
 `;
 
 const CustomModalContent = styled.div`
-  /* background: red; */
   border-radius: 10px;
   width: 90%;
   max-width: 600px;
   max-height: 100%;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto;
   text-align: center;
   padding: 0px;
   position: relative;
@@ -199,7 +266,7 @@ const ModalStep = styled.p`
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* font-size: 15px; */
+
   span {
     background-color: #ac0000;
     color: white;
@@ -248,10 +315,10 @@ const ModalButton = styled.button`
 
 const StyledParagraph = styled.p`
   font-size: 1rem;
-  color: white;
+  color: #ff6f13;
   margin-top: 10px;
   @media screen and (max-width: 320px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 `;
 const Biker = styled.img`
@@ -341,35 +408,42 @@ const Optin = () => {
   return (
     <>
       <Container id="Opt-in">
+        <Circle></Circle>
         <FormWrapper>
           <Center>
             <Title>Get Your FREE Copy Today!</Title>
-            <form onSubmit={handleSubmit}>
-              <StyledInput
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                prefix={<UserOutlined />}
-              />
-              <StyledInput
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                prefix={<MailOutlined />}
-              />
-              <SubmitButton type="submit">
-                {loading ? <Spin /> : "Yes! I want my FREE Copy"}
-              </SubmitButton>
-              <StyledParagraph>Download Free ONLY Today!</StyledParagraph>
-            </form>
+            <Form>
+              <form onSubmit={handleSubmit}>
+                <StyledInput
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  prefix={<UserOutlined />}
+                />
+                <StyledInput
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  prefix={<MailOutlined />}
+                />
+                <SubmitButton type="submit">
+                  {loading ? <Spin /> : "Yes! I want my FREE Copy"}
+                </SubmitButton>
+                <StyledParagraph>Download Free ONLY Today!</StyledParagraph>
+              </form>
+            </Form>
+            <HeroMoving />
           </Center>
         </FormWrapper>
+        <MainCircle>
+          <Circle2></Circle2>
+        </MainCircle>
       </Container>
       <CustomModalBackground isVisible={isModalVisible}>
         <CustomModalContent>
