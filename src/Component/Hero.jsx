@@ -99,7 +99,7 @@ const Circle = styled.div`
     border-radius: 70px 0 0 70px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    height: 170px;
+    height: 190px;
     width: 300px;
     margin-top: -2rem;
     margin-right: -6rem;
@@ -136,9 +136,9 @@ const SlideContainer = styled.div`
     height: 220px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    width: 300px;
-    margin-top: 2rem;
-    height: 300px;
+    width: 320px;
+    margin-top: 2.5rem;
+    height: 320px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
     margin-top: 3rem;
@@ -157,8 +157,8 @@ const Slide = styled.img`
     height: 200px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
     width: 330px;
@@ -212,7 +212,7 @@ const Title = styled.h1`
     0px 2px 0 #ff6f13;
 
   @media screen and (max-width: 320px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
     font-size: 2.5rem;
