@@ -222,7 +222,8 @@ const Subtitles = styled.p`
     font-size: 1rem !important;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding-top: 5px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
     font-size: 1.2rem;
@@ -314,6 +315,9 @@ const AniLay = styled.div`
     @media (min-width: 321px) and (max-width: 399px) {
       font-size: 1.1rem;
     }
+    @media (min-width: 400px) and (max-width: 499px) {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -332,6 +336,7 @@ const Newlay = styled.div`
     font-size: 2rem;
     color: #ac0000;
     z-index: 999;
+    margin-top: 10.1rem;
     background-size: cover;
     transform: rotate(-40deg);
     font-style: italic;
@@ -341,10 +346,8 @@ const Newlay = styled.div`
     }
     @media (min-width: 321px) and (max-width: 399px) {
       font-size: 1.4rem;
-      /* margin-top: -1.5rem !important; */
     }
     @media (min-width: 400px) and (max-width: 499px) {
-      margin-top: -1.5rem !important;
     }
   }
 `;

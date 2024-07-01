@@ -126,6 +126,8 @@ const Circle = styled.div`
   @media (min-width: 321px) and (max-width: 399px) {
   }
   @media (min-width: 400px) and (max-width: 499px) {
+    margin-top: -9rem;
+    margin-left: -8rem;
   }
 `;
 const Circle2 = styled.div`
@@ -149,6 +151,8 @@ const Circle2 = styled.div`
   @media (min-width: 321px) and (max-width: 399px) {
   }
   @media (min-width: 400px) and (max-width: 499px) {
+    margin-top: -10rem;
+    margin-right: -10rem;
   }
 `;
 const MainCircle = styled.div`
