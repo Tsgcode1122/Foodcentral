@@ -91,11 +91,11 @@ const Circle = styled.div`
   margin-right: -8rem;
   border-radius: 130px 0 0 130px;
   @media screen and (max-width: 320px) {
-    height: 120px;
+    height: 130px;
     transform: rotate(-40deg);
     width: 300px;
-    margin-top: -2rem;
-    margin-right: -6rem;
+    margin-top: -0.5rem;
+    margin-right: -5rem;
     border-radius: 70px 0 0 70px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
@@ -131,16 +131,20 @@ const SlideContainer = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 320px) {
-    width: 160px;
+    width: 220px;
     margin-top: 2rem;
-    height: 160px;
+    height: 220px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    width: 240px;
+    width: 300px;
     margin-top: 2rem;
-    height: 240px;
+    height: 300px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
+    margin-top: 3rem;
+    width: 350px;
+
+    height: 350px;
   }
 `;
 
@@ -150,14 +154,17 @@ const Slide = styled.img`
   border-radius: 50%;
   transition: transform 1s ease-in-out;
   @media screen and (max-width: 320px) {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    width: 220px;
-    height: 220px;
+    width: 280px;
+    height: 280px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
+    width: 330px;
+
+    height: 330px;
   }
   &.spin {
     animation: ${slowSpin} 1s linear;
@@ -206,7 +213,7 @@ const Title = styled.h1`
     0px 2px 0 #ff6f13;
 
   @media screen and (max-width: 320px) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
     font-size: 2.5rem;
@@ -226,16 +233,16 @@ const Subtitles = styled.p`
     padding-top: 5px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
 
 const ButtonContainer = styled.div`
   @media screen and (max-width: 320px) {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    margin-top: 1.3rem;
+    margin-top: 2rem;
   }
   @media (min-width: 400px) and (max-width: 499px) {
     margin-top: 2rem;
@@ -293,6 +300,7 @@ const ListContainer = styled.div`
   z-index: 999;
   padding-top: 60px;
   @media screen and (max-width: 320px) {
+    padding-top: 80px;
     margin-top: -0.6rem !important;
   }
   @media (min-width: 321px) and (max-width: 399px) {
@@ -301,7 +309,7 @@ const ListContainer = styled.div`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     margin-top: -1.5rem !important;
-    padding-top: 80px;
+    padding-top: 100px;
   }
 `;
 
@@ -322,15 +330,16 @@ const AniLay = styled.div`
 `;
 
 const Newlay = styled.div`
-  padding: 10px 20px 140px 20px;
+  padding: 10px 20px 250px 20px;
   gap: 10px;
   @media screen and (max-width: 320px) {
-    padding: 5px 5px 80px 5px;
+    padding: 10px 10px 200px 10px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    padding: 10px 15px 140px 15px;
+    padding: 10px 15px 200px 15px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
+    padding: 10px 15px 200px 15px;
   }
   span {
     font-size: 2rem;
