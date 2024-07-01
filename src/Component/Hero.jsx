@@ -143,7 +143,6 @@ const SlideContainer = styled.div`
   @media (min-width: 400px) and (max-width: 499px) {
     margin-top: 3rem;
     width: 350px;
-
     height: 350px;
   }
 `;
@@ -300,7 +299,7 @@ const ListContainer = styled.div`
   z-index: 999;
   padding-top: 60px;
   @media screen and (max-width: 320px) {
-    padding-top: 80px;
+    padding-top: 60px;
     margin-top: -0.6rem !important;
   }
   @media (min-width: 321px) and (max-width: 399px) {
@@ -333,7 +332,7 @@ const Newlay = styled.div`
   padding: 10px 20px 250px 20px;
   gap: 10px;
   @media screen and (max-width: 320px) {
-    padding: 10px 10px 200px 10px;
+    padding: 5px 10px 200px 10px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
     padding: 10px 15px 200px 15px;
