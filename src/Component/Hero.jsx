@@ -21,10 +21,10 @@ const images = [
 
 const slowSpin = keyframes`
   0% { transform: rotate(0deg) scale(1);opacity: 1; }
-  25% { transform: rotate(10deg) scale(1.01);opacity: 0.5; }
-  50% { transform: rotate(3deg) scale(1.08); opacity: 0.8;}
-  75% { transform: rotate(1deg) scale(1.01);opacity: 0.5; }
-  100% { transform: rotate(0deg) scale(1);  opacity: 0.8;}
+  25% { transform: rotate(10deg) scale(1.01);opacity: 0.8; }
+  50% { transform: rotate(3deg) scale(1.08); opacity: 1;}
+  75% { transform: rotate(1deg) scale(1.01);opacity: 0.9; }
+  100% { transform: rotate(0deg) scale(1);  opacity: 1;}
 `;
 
 const SliderWrapper = styled.div`
@@ -401,8 +401,8 @@ const Hero = () => {
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         setIsSpinning(false);
-      }, 3000);
-    }, 6000);
+      }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
