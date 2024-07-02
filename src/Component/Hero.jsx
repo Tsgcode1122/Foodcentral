@@ -35,10 +35,15 @@ const SliderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (min-width: 980px) {
+    height: 100vh;
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
 `;
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
   background: url(${foodcentral3}) no-repeat center center;
   background-size: cover;
   overflow: hidden !important;
@@ -46,6 +51,9 @@ const Container = styled.div`
 
   position: relative;
   text-align: center;
+  @media screen and (min-width: 980px) {
+    height: 100vh;
+  }
 `;
 
 const Circle2 = styled.div`
@@ -72,6 +80,21 @@ const Circle2 = styled.div`
     height: 300px;
     margin-top: -13.1rem;
     margin-left: -7.3rem;
+  }
+  @media screen and (min-width: 980px) {
+    background-color: #ac0000;
+    height: 280px;
+    transform: rotate(40deg);
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    z-index: 10;
+    height: 170px;
+    width: 400px;
+    right: 0;
+    margin-top: -12rem;
+    margin-right: -2rem;
+    border-radius: 80px 0 0 80px;
   }
 `;
 
@@ -112,6 +135,17 @@ const Circle = styled.div`
     margin-right: -6rem;
     border-radius: 70px 0 0 70px;
   }
+  @media screen and (min-width: 680px) {
+    height: 380px;
+    width: 550px;
+  }
+  @media screen and (min-width: 980px) {
+    height: 170px;
+    width: 400px;
+    margin-top: 1rem;
+    margin-right: -2rem;
+    border-radius: 80px 0 0 80px;
+  }
 `;
 
 const MainCircle2 = styled.div`
@@ -145,6 +179,21 @@ const SlideContainer = styled.div`
     width: 350px;
     height: 350px;
   }
+  @media screen and (min-width: 680px) {
+    width: 500px;
+    height: 500px;
+    margin-top: 3rem;
+  }
+  @media screen and (min-width: 980px) {
+    width: 450px;
+    height: 450px;
+    margin-top: 0.1rem;
+  }
+  @media screen and (min-width: 1100px) {
+    width: 500px;
+    height: 500px;
+    margin-top: 0rem;
+  }
 `;
 
 const Slide = styled.img`
@@ -164,6 +213,18 @@ const Slide = styled.img`
     width: 330px;
 
     height: 330px;
+  }
+  @media screen and (min-width: 680px) {
+    width: 450px;
+    height: 450px;
+  }
+  @media screen and (min-width: 980px) {
+    width: 400px;
+    height: 400px;
+  }
+  @media screen and (min-width: 1100px) {
+    width: 450px;
+    height: 450px;
   }
   &.spin {
     animation: ${slowSpin} 1s linear;
@@ -234,6 +295,17 @@ const Subtitles = styled.p`
   @media (min-width: 321px) and (max-width: 399px) {
     font-size: 1.3rem;
   }
+  @media screen and (min-width: 680px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (min-width: 980px) {
+    font-size: 2.1rem;
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 1100px) {
+    font-size: 2.1rem;
+    padding: 0 60px;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -245,6 +317,9 @@ const ButtonContainer = styled.div`
   }
   @media (min-width: 400px) and (max-width: 499px) {
     margin-top: 2rem;
+  }
+  @media screen and (min-width: 980px) {
+    margin-top: 4rem;
   }
 `;
 
@@ -272,6 +347,9 @@ const Button = styled.button`
     padding: 7px 12px;
     font-size: 0.8rem;
   }
+  @media screen and (min-width: 680px) {
+    font-size: 1.5rem;
+  }
 `;
 const OverlayText = styled.div`
   color: red;
@@ -290,9 +368,24 @@ const OverlayText = styled.div`
   @media (min-width: 400px) and (max-width: 499px) {
     border-radius: 50px 50px 0 0;
   }
+  @media screen and (min-width: 680px) {
+    width: 100vw;
+  }
+  @media screen and (min-width: 980px) {
+    border-radius: 0 70px 70px 0;
+  }
+  @media screen and (min-width: 980px) {
+    font-size: 20px;
+    margin-top: 0;
+    max-width: 900px;
+  }
 `;
 const BgO = styled.div`
   background: rgba(254, 254, 254, 0.9);
+  @media screen and (min-width: 980px) {
+    height: 100vh;
+    background: rgba(254, 254, 254, 0.88);
+  }
 `;
 const ListContainer = styled.div`
   color: black;
@@ -310,6 +403,12 @@ const ListContainer = styled.div`
     margin-top: -1.5rem !important;
     padding-top: 100px;
   }
+  @media screen and (min-width: 680px) {
+    padding-top: 80px;
+  }
+  @media screen and (min-width: 980px) {
+    padding-top: 70px;
+  }
 `;
 
 const AniLay = styled.div`
@@ -325,20 +424,29 @@ const AniLay = styled.div`
     @media (min-width: 400px) and (max-width: 499px) {
       font-size: 1.2rem;
     }
+    @media screen and (min-width: 680px) {
+      font-size: 1.8rem;
+    }
   }
 `;
 
 const Newlay = styled.div`
-  padding: 10px 20px 250px 20px;
+  padding: 10px 20px 50px 20px;
   gap: 10px;
   @media screen and (max-width: 320px) {
-    padding: 5px 10px 200px 10px;
+    padding: 5px 10px 20px 10px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
-    padding: 10px 15px 200px 15px;
+    padding: 10px 15px 20px 15px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    padding: 10px 15px 200px 15px;
+    padding: 10px 15px 20px 15px;
+  }
+  @media screen and (min-width: 680px) {
+    padding: 20px 30px 20px 30px;
+  }
+  @media screen and (min-width: 980px) {
+    padding: 20px 30px 40px 30px;
   }
   span {
     font-size: 2rem;
@@ -376,7 +484,18 @@ const ListItem = styled.p`
   }
   @media (min-width: 400px) and (max-width: 499px) {
   }
-
+  @media screen and (min-width: 680px) {
+    font-size: 24px;
+    gap: 30px;
+    padding: 0 20px;
+    text-align: justify !important;
+  }
+  @media screen and (min-width: 980px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1100px) {
+    padding: 0 90px;
+  }
   img {
     max-width: 100%;
     height: 20px;
@@ -385,6 +504,9 @@ const ListItem = styled.p`
     }
     @media (min-width: 400px) and (max-width: 499px) {
       height: 16px;
+    }
+    @media screen and (min-width: 680px) {
+      height: 20px;
     }
   }
 `;
