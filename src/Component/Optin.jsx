@@ -47,7 +47,7 @@ const Center = styled.div`
   margin: 4rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   max-width: 400px;
-  z-index: 999;
+  z-index: 100;
   border-radius: 20px;
   img {
     max-width: 100%;

@@ -319,6 +319,7 @@ const NewHero = () => {
   return (
     <>
       {/* <Roadlike /> */}
+
       <Hero />
       {/* <HeroBig /> */}
       <div id="Opt-in">

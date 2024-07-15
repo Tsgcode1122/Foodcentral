@@ -9,7 +9,9 @@ import foodcentral3 from "../images/new232.jpg";
 import check from "../images/checked.png";
 import line from "../images/lineb.png";
 import Navbar from "./Navbar";
+
 import useBottomToTopSwipe from "../animation/useBottomToTopSwipe";
+import Moving from "./Moving";
 
 const images = [
   foodcentral,
@@ -104,15 +106,15 @@ const MainCircle = styled.div`
 `;
 const Circle = styled.div`
   background-color: #ac0000;
-  height: 280px;
+  height: 200px;
   transform: rotate(-40deg);
-  width: 500px;
+  width: 300px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: absolute;
   z-index: 10;
-  margin-top: -5rem;
-  margin-right: -8rem;
-  border-radius: 130px 0 0 130px;
+  margin-top: -2rem;
+  margin-right: -4rem;
+  border-radius: 50px 0 0 50px;
   @media screen and (max-width: 320px) {
     height: 130px;
     transform: rotate(-40deg);
@@ -156,7 +158,7 @@ const MainCircle2 = styled.div`
 const SlideContainer = styled.div`
   width: 300px;
   z-index: 100;
-  margin-top: 1rem;
+  margin-top: 3rem;
   height: 300px;
   box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 8px;
   background-color: #f7f6f6;
@@ -166,16 +168,16 @@ const SlideContainer = styled.div`
   align-items: center;
   @media screen and (max-width: 320px) {
     width: 220px;
-    margin-top: 2rem;
+    margin-top: 3rem;
     height: 220px;
   }
   @media (min-width: 321px) and (max-width: 399px) {
     width: 320px;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     height: 320px;
   }
   @media (min-width: 400px) and (max-width: 499px) {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     width: 350px;
     height: 350px;
   }
@@ -539,7 +541,8 @@ const Hero = () => {
   return (
     <>
       <Container>
-        <Navbar />
+        <Moving />
+
         <BgO>
           <MainCircle2>
             <Circle></Circle>
